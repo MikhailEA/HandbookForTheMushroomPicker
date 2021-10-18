@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mushrooms_array">
+        <item>Белый гриб</item>
+        <item>Подосиновик</item>
+        <item>Лисичка</item>
+        <item>Подберезовик</item>
+        <item>Опенок</item>
+        <item>Груздь</item>
+        <item>Масленок</item>
+        <item>Свинушка</item>
+        <item>Чернушка</item>
+        <item>Зонтик</item>
+        <item>Шампиньон</item>
+
+    </string-array>
+
+    <string-array name="edible_mushrooms_array">
+        <item>Белый гриб</item>
+        <item>Подосиновик</item>
+        <item>Лисичка</item>
+        <item>Подберезовик</item>
+        <item>Опенок</item>
+        <item>Масленок</item>
+        <item>Зонтик</item>
+        <item>Шампиньон</item>
+    </string-array>
+
+    <string-array name="poisonous_mushrooms_array">
+        <item>Мухомор</item>
+        <item>Бледная поганка</item>
+        <item>Ложный белый</item>
+        <item></item>
+    </string-array>
+
+
+    <string-array name="mushrooms_are_edible_array">
+        <item>Груздь</item>
+        <item>Свинушка</item>
+        <item>Чернушка</item>
+        <item>Сатанинский гриб</item>
+    </string-array>
+
+
+</resources>
