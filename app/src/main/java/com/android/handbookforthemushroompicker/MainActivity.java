@@ -18,6 +18,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         list = findViewById(R.id.listView);
         array = getResources().getStringArray(R.array.mushrooms_array);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, array);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                new ArrayList<String>(Arrays.asList(array)));
         list.setAdapter(adapter);
 
         Toolbar toolbar = findViewById(R.id.toolbar);

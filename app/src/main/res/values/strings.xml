@@ -8,7 +8,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Грибы</string>
-    <string name="menu_gallery">Грибы съедобные</string>
+    <string name="menu_edible_mushrooms">Грибы съедобные</string>
     <string name="menu_slideshow">Грибы ядовитые</string>
     <string name="menu_slideshow2">Грибы условно-съедобные</string>
     <string name="menu_mushroom_stories">Грибные истории</string>

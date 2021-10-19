@@ -41,5 +41,17 @@
         <item>Сатанинский гриб</item>
     </string-array>
 
+    <string-array name="mushroom_stories">
+        <item>Грибник в лесу </item>
+        <item>Грибник на кавказе</item>
+        <item>Грибник на шашлыках</item>
+
+    </string-array>
+
+    <string-array name="video_array">
+        <item>Видео в лесу </item>
+        <item>Видео на кавказе</item>
+        <item>Видео на шашлыках</item>
+    </string-array>
 
 </resources>
