@@ -9,11 +9,12 @@
 
     <string name="menu_home">Грибы</string>
     <string name="menu_edible_mushrooms">Грибы съедобные</string>
-    <string name="menu_slideshow">Грибы ядовитые</string>
-    <string name="menu_slideshow2">Грибы условно-съедобные</string>
+    <string name="menu_poisonous_mushrooms">Грибы ядовитые</string>
+    <string name="menu_mushrooms_are_edible">Грибы условно-съедобные</string>
     <string name="menu_mushroom_stories">Грибные истории</string>
-    <string name="menu_slideshow4">Видео</string>
+    <string name="menu_video">Видео</string>
 
 
     <string name="button_pressed">Нажата кнопка</string>
+    <string name="other">Разное</string>
 </resources>

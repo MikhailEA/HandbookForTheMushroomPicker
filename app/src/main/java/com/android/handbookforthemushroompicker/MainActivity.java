@@ -60,13 +60,52 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
-        if (id == R.id.nav_home)
+        if (id == R.id.id_mushrooms)
         {
+            array = getResources().getStringArray(R.array.mushrooms_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
+
             Toast.makeText(this, "button_pressed", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.id_edible_mushrooms) {
+
+            array = getResources().getStringArray(R.array.edible_mushrooms_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
+
+        } else if (id == R.id.id_poisonous_mushrooms) {
+
+            array = getResources().getStringArray(R.array.poisonous_mushrooms_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
+
+        } else if (id == R.id.id_mushrooms_are_edible) {
+
+            array = getResources().getStringArray(R.array.mushrooms_are_edible_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
+
+        } else if (id == R.id.id_mushroom_stories) {
+
+            array = getResources().getStringArray(R.array.mushroom_stories_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
+
+        } else if (id == R.id.id_video) {
+
+            array = getResources().getStringArray(R.array.video_array);
+            adapter.clear();
+            adapter.addAll(array);
+            adapter.notifyDataSetChanged();
 
         }
+
         drawer.closeDrawer(GravityCompat.START);
         return false;
     }

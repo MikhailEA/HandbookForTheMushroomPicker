@@ -33,7 +33,6 @@
         <item></item>
     </string-array>
 
-
     <string-array name="mushrooms_are_edible_array">
         <item>Груздь</item>
         <item>Свинушка</item>
@@ -41,7 +40,7 @@
         <item>Сатанинский гриб</item>
     </string-array>
 
-    <string-array name="mushroom_stories">
+    <string-array name="mushroom_stories_array">
         <item>Грибник в лесу </item>
         <item>Грибник на кавказе</item>
         <item>Грибник на шашлыках</item>

@@ -12,26 +12,26 @@
         <item
             android:id="@+id/id_edible_mushrooms"
             android:icon="@drawable/ic_mushroom_clip_art"
-            android:title="@string/menu_edible_mushrooms" />
+            android:title="@string/menu_edible_mushrooms"/>
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/id_poisonous_mushrooms"
             android:icon="@drawable/ic_mushroom_clip_art"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_poisonous_mushrooms"/>
         <item
-            android:id="@+id/nav_slideshow2"
+            android:id="@+id/id_mushrooms_are_edible"
             android:icon="@drawable/ic_mushroom_clip_art"
-            android:title="@string/menu_slideshow2" />
+            android:title="@string/menu_mushrooms_are_edible"/>
 
-        <item android:title="Разное">
+        <item android:title="@string/other">
             <menu>
                 <item
-                    android:id="@+id/nav_slideshow3"
+                    android:id="@+id/id_mushroom_stories"
                     android:icon="@drawable/ic_menu_slideshow"
                     android:title="@string/menu_mushroom_stories" />
                 <item
-                    android:id="@+id/nav_slideshow4"
+                    android:id="@+id/id_video"
                     android:icon="@drawable/ic_menu_slideshow"
-                    android:title="@string/menu_slideshow4" />
+                    android:title="@string/menu_video" />
             </menu>
         </item>
 
