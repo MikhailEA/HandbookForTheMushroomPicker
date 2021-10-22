@@ -1,8 +1,11 @@
 package com.android.handbookforthemushroompicker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -50,6 +53,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
+                Intent intent = new Intent(MainActivity.this, TextContentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
