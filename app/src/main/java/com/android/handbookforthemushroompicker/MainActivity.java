@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private String[] array;
     private ArrayAdapter<String> adapter;
     private Toolbar toolbar;
+    private int category_index;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Intent intent = new Intent(MainActivity.this, TextContentActivity.class);
+                intent.putExtra("category", category_index);
+                intent.putExtra("position", position);
                 startActivity(intent);
             }
         });
@@ -78,58 +82,57 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.id_mushrooms)
         {
             toolbar.setTitle(R.string.mushrooms);
-
             array = getResources().getStringArray(R.array.mushrooms_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
-
+            category_index = 0;
             Toast.makeText(this, "button_pressed", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.id_edible_mushrooms) {
 
             toolbar.setTitle(R.string.edible_mushrooms);
-
             array = getResources().getStringArray(R.array.edible_mushrooms_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            category_index = 1;
 
         } else if (id == R.id.id_poisonous_mushrooms) {
 
             toolbar.setTitle(R.string.poisonous_mushrooms);
-
             array = getResources().getStringArray(R.array.poisonous_mushrooms_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            category_index = 2;
 
         } else if (id == R.id.id_mushrooms_are_edible) {
 
             toolbar.setTitle(R.string.mushrooms_are_edible);
-
             array = getResources().getStringArray(R.array.mushrooms_are_edible_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            category_index = 3;
 
         } else if (id == R.id.id_mushroom_stories) {
 
             toolbar.setTitle(R.string.mushroom_stories);
-
             array = getResources().getStringArray(R.array.mushroom_stories_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            category_index = 4;
 
         } else if (id == R.id.id_video) {
 
             toolbar.setTitle(R.string.video);
-
             array = getResources().getStringArray(R.array.video_array);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            category_index = 5;
 
         }
 
