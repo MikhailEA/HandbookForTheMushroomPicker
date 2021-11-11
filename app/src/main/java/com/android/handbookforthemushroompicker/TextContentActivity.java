@@ -20,10 +20,7 @@ public class TextContentActivity extends AppCompatActivity {
     private int [] edible_mushrooms_array ={R.string.edible_mushrooms1, R.string.edible_mushrooms2,
             R.string.edible_mushrooms3, R.string.edible_mushrooms4, R.string.edible_mushrooms5,
             R.string.edible_mushrooms, R.string.edible_mushrooms7, R.string.edible_mushrooms8,};
-    private int [] image_mushrooms ={R.drawable.boletus, R.drawable.chanterelle, R.drawable.lump, R.drawable.white_mushroom};
-
-
-
+    private int [] image_mushrooms_array ={R.drawable.white_mushroom, R.drawable.boletus, R.drawable.lump, R.drawable.boletus};
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +38,7 @@ public class TextContentActivity extends AppCompatActivity {
         }
         switch (category) {
             case 0:
-                iContent.setImageResource(image_mushrooms[position]);
+                iContent.setImageResource(image_mushrooms_array[position]);
                 text_content.setText(mushrooms_array[position]);
                 break;
             case 1:
