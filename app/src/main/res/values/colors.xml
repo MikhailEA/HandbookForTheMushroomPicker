@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#FF000000</color>
     <color name="backgroundColor">#203A43</color>
+    <color name="black2">#090808</color>
+    <color name="creen">#222121</color>
 
 </resources>

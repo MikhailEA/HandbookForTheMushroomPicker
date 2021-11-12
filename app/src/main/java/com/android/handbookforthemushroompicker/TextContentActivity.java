@@ -1,6 +1,7 @@
 package com.android.handbookforthemushroompicker;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TextContentActivity extends AppCompatActivity {
     private TextView text_content;
+    private Typeface face1;
     private ImageView iContent;
     private int category = 0;
     private int position = 0;
@@ -26,10 +28,18 @@ public class TextContentActivity extends AppCompatActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setContentView(R.layout.text_content);
-        text_content = findViewById(R.id.text_main_content);
-        iContent = findViewById(R.id.imageContent);
+        init();
         reciveIntent();
     }
+
+    private void init() {
+        text_content = findViewById(R.id.text_main_content);
+        iContent = findViewById(R.id.imageContent);
+        face1 = Typeface.createFromAsset(this.getAssets(), "fonts/JosefinSans-Medium.ttf");
+        text_content.setTypeface(face1);
+    }
+
+
     private void reciveIntent() {
         Intent i = getIntent();
         if (i != null) {
