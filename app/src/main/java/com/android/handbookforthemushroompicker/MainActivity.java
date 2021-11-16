@@ -81,62 +81,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = menuItem.getItemId();
         if (id == R.id.id_mushrooms)
         {
-            toolbar.setTitle(R.string.mushrooms);
-            array = getResources().getStringArray(R.array.mushrooms_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 0;
-            Toast.makeText(this, "button_pressed", Toast.LENGTH_SHORT).show();
+            fillArray(R.string.mushrooms, R.array.mushrooms_array, 0);
 
         } else if (id == R.id.id_edible_mushrooms) {
 
-            toolbar.setTitle(R.string.edible_mushrooms);
-            array = getResources().getStringArray(R.array.edible_mushrooms_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 1;
+            fillArray(R.string.edible_mushrooms, R.array.edible_mushrooms_array, 1);
 
         } else if (id == R.id.id_poisonous_mushrooms) {
 
-            toolbar.setTitle(R.string.poisonous_mushrooms);
-            array = getResources().getStringArray(R.array.poisonous_mushrooms_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 2;
+            fillArray(R.string.poisonous_mushrooms, R.array.poisonous_mushrooms_array, 2);
 
         } else if (id == R.id.id_mushrooms_are_edible) {
 
-            toolbar.setTitle(R.string.mushrooms_are_edible);
-            array = getResources().getStringArray(R.array.mushrooms_are_edible_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 3;
+            fillArray(R.string.mushrooms_are_edible, R.array.mushrooms_are_edible_array, 3);
 
         } else if (id == R.id.id_mushroom_stories) {
 
-            toolbar.setTitle(R.string.mushroom_stories);
-            array = getResources().getStringArray(R.array.mushroom_stories_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 4;
+            fillArray(R.string.mushroom_stories, R.array.mushroom_stories_array, 4);
 
         } else if (id == R.id.id_video) {
 
-            toolbar.setTitle(R.string.video);
-            array = getResources().getStringArray(R.array.video_array);
-            adapter.clear();
-            adapter.addAll(array);
-            adapter.notifyDataSetChanged();
-            category_index = 5;
+            fillArray(R.string.video, R.array.video_array, 5);
 
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return false;
+
+    }
+
+    private void fillArray(int title, int arrayList, int index) {
+        toolbar.setTitle(title);
+        array = getResources().getStringArray(arrayList);
+        adapter.clear();
+        adapter.addAll(array);
+        adapter.notifyDataSetChanged();
+        category_index = index;
     }
 }
