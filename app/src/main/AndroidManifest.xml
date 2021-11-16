@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HandbookForTheMushroomPicker">
         <activity
-            android:name=".MainActivity"
+            android:name=".LogoActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HandbookForTheMushroomPicker.NoActionBar">
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TextContentActivity" />
-        <activity android:name=".LogoActivity" />
+        <activity android:name=".MainActivity" android:theme="@style/Theme.HandbookForTheMushroomPicker.NoActionBar" />
     </application>
 
 </manifest>
