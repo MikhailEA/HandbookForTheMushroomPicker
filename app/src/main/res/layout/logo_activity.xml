@@ -7,7 +7,7 @@
     android:background="@color/creen">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logoView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="152dp"
@@ -19,7 +19,7 @@
         android:src="@drawable/mushrooms_logo"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAnim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
