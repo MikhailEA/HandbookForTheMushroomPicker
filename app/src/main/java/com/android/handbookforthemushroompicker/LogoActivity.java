@@ -26,8 +26,13 @@ public class LogoActivity extends Activity {
 
     private void init() {
         logoAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.logo_anim);
+        buttonLogoAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_anim);
+
         logoImage = findViewById(R.id.logoView);
         bAnim = findViewById(R.id.buttonAnim);
+
+        logoImage.startAnimation(logoAnim);
+        bAnim.startAnimation(buttonLogoAnim);
     }
 
     public void onClickStart(View view)
