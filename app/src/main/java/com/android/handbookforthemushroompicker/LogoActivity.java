@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 
 public class LogoActivity extends Activity {
     private Animation logoAnim, buttonLogoAnim;
-    private Button bAnim;
+    //private Button bAnim;
 
     private ImageView logoImage;
     @Override
@@ -21,6 +21,7 @@ public class LogoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logo_activity);
         init();
+        startMainActivity();
 
     }
 
@@ -29,10 +30,10 @@ public class LogoActivity extends Activity {
         buttonLogoAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_anim);
 
         logoImage = findViewById(R.id.logoView);
-        bAnim = findViewById(R.id.buttonAnim);
+        //bAnim = findViewById(R.id.buttonAnim);
 
         logoImage.startAnimation(logoAnim);
-        bAnim.startAnimation(buttonLogoAnim);
+        //bAnim.startAnimation(buttonLogoAnim);
     }
 
     public void onClickStart(View view)
@@ -45,5 +46,21 @@ public class LogoActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         finish();
+    }
+
+    private void startMainActivity() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Intent i = new Intent(LogoActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        }).start();
     }
 }
