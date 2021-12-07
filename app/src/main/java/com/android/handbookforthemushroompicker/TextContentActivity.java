@@ -7,9 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TextContentActivity extends AppCompatActivity {
+
+    private ActionBar actionBar;
     private TextView text_content;
     private Typeface face1;
     private ImageView iContent;
@@ -23,6 +26,7 @@ public class TextContentActivity extends AppCompatActivity {
             R.string.edible_mushrooms3, R.string.edible_mushrooms4, R.string.edible_mushrooms5,
             R.string.edible_mushrooms, R.string.edible_mushrooms7, R.string.edible_mushrooms8,};
     private int [] image_mushrooms_array ={R.drawable.white_mushroom, R.drawable.boletus, R.drawable.lump, R.drawable.boletus};
+    private String [] title_mushrooms_array ={"Белый гриб","Подосиновик","Лисичка","Подберезовик","Опенок","Масленок","Зонтик",};
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class TextContentActivity extends AppCompatActivity {
         iContent = findViewById(R.id.imageContent);
         face1 = Typeface.createFromAsset(this.getAssets(), "fonts/JosefinSans-Medium.ttf");
         text_content.setTypeface(face1);
+        actionBar = getSupportActionBar();
     }
 
 
