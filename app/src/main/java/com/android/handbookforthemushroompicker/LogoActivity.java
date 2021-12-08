@@ -30,7 +30,7 @@ public class LogoActivity extends Activity {
         buttonLogoAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_anim);
 
         logoImage = findViewById(R.id.logoView);
-        //bAnim = findViewById(R.id.buttonAnim);
+        //bAnim = findViewById(R.id.buttomAnim);
 
         logoImage.startAnimation(logoAnim);
         //bAnim.startAnimation(buttonLogoAnim);

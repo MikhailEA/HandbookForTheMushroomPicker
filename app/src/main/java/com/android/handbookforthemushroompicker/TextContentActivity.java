@@ -55,6 +55,7 @@ public class TextContentActivity extends AppCompatActivity {
             case 0:
                 iContent.setImageResource(image_mushrooms_array[position]);
                 text_content.setText(mushrooms_array[position]);
+                actionBar.setTitle(title_mushrooms_array[position]);
                 break;
             case 1:
                 text_content.setText(edible_mushrooms_array[position]);
