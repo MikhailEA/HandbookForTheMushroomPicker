@@ -37,16 +37,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         list = findViewById(R.id.listView);
         array = getResources().getStringArray(R.array.mushrooms_array);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
-                new ArrayList<String>(Arrays.asList(array)));
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<String>(Arrays.asList(array)));
         list.setAdapter(adapter);
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -55,8 +51,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-
 
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -69,6 +63,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override

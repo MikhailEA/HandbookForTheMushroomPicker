@@ -24,9 +24,9 @@ public class TextContentActivity extends AppCompatActivity {
             R.string.mushrooms9, R.string.mushrooms10, R.string.mushrooms11};
     private int [] edible_mushrooms_array ={R.string.edible_mushrooms1, R.string.edible_mushrooms2,
             R.string.edible_mushrooms3, R.string.edible_mushrooms4, R.string.edible_mushrooms5,
-            R.string.edible_mushrooms, R.string.edible_mushrooms7, R.string.edible_mushrooms8,};
+            R.string.edible_mushrooms, R.string.edible_mushrooms7, R.string.edible_mushrooms8};
     private int [] image_mushrooms_array ={R.drawable.white_mushroom, R.drawable.boletus, R.drawable.lump, R.drawable.boletus};
-    private String [] title_mushrooms_array ={"Белый гриб","Подосиновик","Лисичка","Подберезовик","Опенок","Масленок","Зонтик",};
+    private String [] title_mushrooms_array ={"Белый гриб","Подосиновик","Лисичка","Подберезовик","Опенок","Груздь","Масленок","Свинушка","Чернушка","Зонтик","Шампиньон"};
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
