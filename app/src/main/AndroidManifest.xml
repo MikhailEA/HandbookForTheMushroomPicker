@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".TextContentActivity" />
         <activity android:name=".MainActivity" android:theme="@style/Theme.HandbookForTheMushroomPicker.NoActionBar" />
+        <activity android:name=".settings.SettingActivity" />
     </application>
 
 </manifest>
