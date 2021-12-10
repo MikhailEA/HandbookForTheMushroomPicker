@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Настройки</string>
+    <string name="main_text_size">Размер текста</string>
 
     <string name="mushrooms">Грибы</string>
     <string name="edible_mushrooms">Грибы съедобные</string>

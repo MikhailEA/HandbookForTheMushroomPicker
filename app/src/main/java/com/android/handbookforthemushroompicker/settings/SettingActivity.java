@@ -16,11 +16,15 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getSupportActionBar() != null){
+
+        if (getSupportActionBar() != null)
+        {
             actionBar = getSupportActionBar();
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle(getString(R.string.action_settings));
         }
+        //Заменяем основной контент на наш фрагмент
+        getFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment().commit());
     }
 
 
