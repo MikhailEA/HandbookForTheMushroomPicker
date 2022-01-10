@@ -39,7 +39,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/mushrooms1" />
+                android:text="@string/mushrooms1"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

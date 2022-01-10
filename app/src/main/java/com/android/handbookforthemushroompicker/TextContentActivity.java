@@ -1,8 +1,11 @@
 package com.android.handbookforthemushroompicker;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +19,7 @@ public class TextContentActivity extends AppCompatActivity {
     private TextView text_content;
     private Typeface face1;
     private ImageView iContent;
+    private SharedPreferences def_pref;
     private int category = 0;
     private int position = 0;
     private int [] mushrooms_array ={R.string.mushrooms1, R.string.mushrooms2,
@@ -37,11 +41,14 @@ public class TextContentActivity extends AppCompatActivity {
     }
 
     private void init() {
+        def_pref = PreferenceManager.getDefaultSharedPreferences(this);
         text_content = findViewById(R.id.text_main_content);
         iContent = findViewById(R.id.imageContent);
         face1 = Typeface.createFromAsset(this.getAssets(), "fonts/JosefinSans-Medium.ttf");
         text_content.setTypeface(face1);
         actionBar = getSupportActionBar();
+        String text =
+        switch ()
     }
 
 
