@@ -47,8 +47,20 @@ public class TextContentActivity extends AppCompatActivity {
         face1 = Typeface.createFromAsset(this.getAssets(), "fonts/JosefinSans-Medium.ttf");
         text_content.setTypeface(face1);
         actionBar = getSupportActionBar();
-        String text =
-        switch ()
+        String text = def_pref.getString("main_text_size", "Средний");
+        if (text != null) {
+        switch (text){
+            case "Большой" :
+                text_content.setTextSize(24);
+                break;
+            case "Средний" :
+                text_content.setTextSize(18);
+                break;
+            case "Маленький" :
+                text_content.setTextSize(14);
+                break;
+        }
+        }
     }
 
 
